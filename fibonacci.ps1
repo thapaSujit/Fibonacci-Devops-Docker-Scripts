@@ -1,22 +1,32 @@
 # Function to calculate Fibonacci sequence
 function Get-Fibonacci {
     param (
+        [Parameter(Mandatory=$true)]
+        [ValidateRange(0,[int]::MaxValue)]  # Validate that the parameter is a non-negative integer
         [int]$n
     )
 
-    $fibonacci = @(0, 1)
+    try {
+        # Initialize Fibonacci sequence
+        $fibonacci = @(0, 1)
 
-    if ($n -eq 0) {
-        Write-Host "0"
-    }
-    elseif ($n -eq 1) {
-        Write-Host "1"
-    }
-    else {
-        for ($i = 2; $i -le $n; $i++) {
-            $fibonacci += $fibonacci[-1] + $fibonacci[-2]
+        # Base cases
+        if ($n -eq 0) {
+            Write-Output "0"
         }
-        Write-Host $fibonacci[-1]
+        elseif ($n -eq 1) {
+            Write-Output "1"
+        }
+        else {
+            # Calculate Fibonacci numbers
+            for ($i = 2; $i -le $n; $i++) {
+                $fibonacci += $fibonacci[-1] + $fibonacci[-2]
+            }
+            Write-Output $fibonacci[-1]
+        }
+    }
+    catch {
+        Write-Error "Failed to calculate Fibonacci sequence: $_"
     }
 }
 
