@@ -28,3 +28,40 @@ Runs a Docker container.
 ```powershell
     Run-DockerContainer -ImageName <image_name> -ComputerName <remote_computer_name> -DockerParams <array_of_parameters>
 ```
+
+## Fibonacci Script
+
+The Fibonacci script (fibonacci.ps1) calculates the Fibonacci sequence.
+
+### Usage
+.\fibonacci.ps1 [<n>]
+
+To run the Fibonacci script:
+
+```powershell
+    .\fibonacci.ps1 [<n>]
+```
+
+## Examples
+
+### Building a Docker Image
+
+```powershell
+    Build-DockerImage -Dockerfile .\Dockerfile -Tag fibonacci-image -Context .
+```
+
+### Copying Prerequisites
+
+```powershell
+    Copy-Prerequisites -ComputerName remote-host -Path .\prerequisites -Destination C:\temp
+```
+
+### Running a Docker Container
+
+```powershell
+    Run-DockerContainer -ImageName fibonacci-image -ComputerName remote-host -DockerParams 5
+```
+
+
+
+
