@@ -4,5 +4,5 @@ FROM mcr.microsoft.com/powershell:latest
 # Copy the PowerShell script to the container
 COPY fibonacci.ps1 /
 
-# Set the entry point to the PowerShell script
+# Set the entry point to PowerShell script
 ENTRYPOINT ["pwsh", "-File", "/fibonacci.ps1"]
