@@ -59,8 +59,21 @@ To run the Fibonacci script:
 ### Running a Docker Container
 
 ```powershell
+    # If you skip the Docker parameter, it will output all Fibonacci numbers one by one every 0.5 second.
+    Run-DockerContainer -ImageName fibonacci-image -ComputerName remote-host
+
+    # If you include the Docker parameter, it will calculate the Fibonacci number for that parameter.
     Run-DockerContainer -ImageName fibonacci-image -ComputerName remote-host -DockerParams 5
+
 ```
+
+To check if the Fibonacci sequence is working correctly, you can use the following command to view the Docker container logs:
+
+```powershell
+    docker logs <container_id>
+```
+
+Replace <container_id> with the actual ID of the Docker container.
 
 
 
