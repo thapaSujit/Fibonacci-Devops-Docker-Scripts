@@ -36,7 +36,6 @@ Runs a Docker container.
 The Fibonacci script (fibonacci.ps1) calculates the Fibonacci sequence.
 
 ### Usage
-.\fibonacci.ps1 [<n>]
 
 To run the Fibonacci script:
 
@@ -83,6 +82,14 @@ Alternatively, you can use docker exec to run the Fibonacci script within the ru
     # Replace <container_id> with the actual ID of the Docker container.
     docker exec -it <container_id> pwsh /fibonacci.ps1
 ```
+
+## Testing Constraints
+
+Please note that while the DockerHelper module and Fibonacci script have been successfully tested for local execution, testing for remote execution has not been performed due to resource constraints. The provided scripts and cmdlets are designed to work in both local and remote environments; however, it's compatibility and functionality has not been tested on specific remote environment. 
+
+I acknowledge the importance of testing in various environments to validate the robustness and reliability of the scripts. Unfortunately, testing capabilities were limited by hardware and resource availability.
+
+
 
 
 
