@@ -6,7 +6,7 @@ function Build-DockerImage {
     param(
         # Parameter: Dockerfile
         [Parameter(Mandatory=$true)]
-        [ValidateScript({Test-Path $_ -PathType Leaf})]  # Validate that the provided path exists and points to a file
+        [ValidateScript({Test-Path $_ -PathType Leaf})]  # Validate that provided path exists and points to a file
         [string]$Dockerfile,                            # Path to the Dockerfile used for building the Docker image
         
         # Parameter: Tag
