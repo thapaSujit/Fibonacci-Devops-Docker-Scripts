@@ -2,7 +2,7 @@
 function Get-Fibonacci {
     param (
         [Parameter(Mandatory=$true)]
-        [ValidateRange(0,[int]::MaxValue)]  # Validate that parameter is a non-negative integer
+        [ValidateRange(0,[int]::MaxValue)]  # Validate that parameter is non-negative integer
         [int]$n
     )
 
