@@ -39,7 +39,7 @@ function Build-DockerImage {
     }
 }
 
-# Cmdlet: Copy-Prerequisites
+# Cmdlet : Copy-Prerequisites
 function Copy-Prerequisites {
     [CmdletBinding()]
     param(
