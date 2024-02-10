@@ -1,4 +1,4 @@
-﻿# Use a base image that supports PowerShell
+﻿# Use a base image that supports PowerShell from dockerhub
 FROM mcr.microsoft.com/powershell:latest
 
 # Copy the PowerShell script to the container
